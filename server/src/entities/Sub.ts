@@ -1,3 +1,9 @@
+import { Expose } from "class-transformer";
+import { Column, Entity, Index, JoinColumn, ManyToMany, ManyToOne, OneToMany } from "typeorm";
+import BaseEntity from './Entity';
+import Post from "./Post";
+import { User } from "./User";
+
 @Entity("subs")
 export default class Sub extends BaseEntity {
     @Index()
@@ -25,3 +31,16 @@ export default class Sub extends BaseEntity {
 
     @OneToMany(() => Post, (post) => post.sub)
     posts: Post[]
+
+    @Expose()
+    get imageUrl(): string {
+        return this.imageUrn ? `${process.env.APP_URL}/images/${this.imageUrn}` :
+            "https://www.gravatar.com/avatar?d=mp&f=y"
+    }
+
+    @Expose()
+    get bannerUrl(): string {
+        return this.bannerUrn ? `${process.env.APP_URL}/images/${this.bannerUrn}` :
+            undefined;
+    }
+}
