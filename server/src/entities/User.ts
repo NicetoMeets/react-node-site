@@ -1,7 +1,9 @@
-import BaseEntity from './Entity';
 import { IsEmail, Length } from "class-validator";
 import { Entity, PrimaryGeneratedColumn, Column, Index, In, OneToMany, BeforeInsert } from "typeorm"
 import bcrypt from 'bcryptjs';
+import Post from "./Post";
+import Vote from "./Vote";
+import BaseEntity from './Entity';
 
 
 @Entity("users")
