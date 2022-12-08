@@ -12,6 +12,7 @@
    "author": "",
    "license": "ISC",
    "dependencies": {
+      "@types/socket.io": "^3.0.2",
       "bcryptjs": "^2.4.3",
       "class-transformer": "^0.5.1",
       "class-validator": "^0.13.2",
@@ -24,6 +25,7 @@
       "nodemon": "^2.0.20",
       "pg": "^8.4.0",
       "reflect-metadata": "^0.1.13",
+      "socket.io": "^4.5.4",
       "typeorm": "0.3.10"
    },
    "devDependencies": {

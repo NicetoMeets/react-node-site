@@ -10,7 +10,7 @@ import { faDizzy } from "@fortawesome/free-regular-svg-icons";
 const NavBar: React.FC = () => {
     const { loading, authenticated } = useAuthState();
     const dispatch = useAuthDispatch();
-
+    
     const handleLogout = () => {
         axios.post("/auth/logout")
             .then(() => {
@@ -23,27 +23,31 @@ const NavBar: React.FC = () => {
     }
 
     return (
-        <div className="fixed inset-x-0 top-0 z-10 flex items-center justify-between px-5 pt-2 pb-2 bg-white h-13">
+        <div className="fixed inset-x-0 top-0 z-10 flex items-center justify-between px-3 pt-2 pb-2 bg-white h-13">
             <span className="text-2xl font-semibold text-gray-400">
                 <Link href="/" legacyBehavior>
                 <a>
                 <FontAwesomeIcon icon={faDizzy} />
-                <span className= "text-xl ml-1" >Dizzy</span>
+                <span className= "text-xl ml-2" >Dizzy</span>
                 </a>
-                
+                </Link>
+                <Link href="http://naver.com" legacyBehavior>
+                <a>
+                <span className= "text-xl ml-20" >Movieflex</span>
+                </a>
+                </Link>
+                <Link href="http://naver.com" legacyBehavior>
+                <a>
+                <span className= "text-xl ml-20" >TodoApp</span>
+                </a>
+                </Link>
+                <Link href="http://naver.com" legacyBehavior>
+                <a>
+                <span className= "text-xl ml-20" >Tetris</span>
+                </a>
                 </Link>
             </span>
-            <div className="max-w-full px-4">
-                <div className="relative flex items-center bg-gray-100 border rounded hover:border-gray-700 hover:bg-white">
-                    <FaSearch className="ml-2" />
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        className="px-3 py-1 bg-transparent rounded h-7 focus:outline-none"
-                    /> 
-                </div>
-            </div>
-
+            
             <div className="flex">
                 {!loading && (
                     authenticated ? (

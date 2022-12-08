@@ -9,11 +9,13 @@ import cookieParser from "cookie-parser";
 import postRoutes from './routes/posts';
 
 const app = express();
+
 const origin = "http://localhost:3000"
 app.use(cors({
     origin,
     credentials: true
 }))
+
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
@@ -24,7 +26,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/subs", subRoutes);
 app.use("/api/posts", postRoutes);
 
+
 app.use(express.static("public"));
+
 
 let port = 4000;
 
