@@ -18,7 +18,7 @@ const PostPage = () => {
     const { data: comments, mutate: commentMutate } = useSWR<Comment[]>(
         identifier && slug ? `/posts/${identifier}/${slug}/comments` : null
     )
-
+    
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         if (newComment.trim() === "") {
