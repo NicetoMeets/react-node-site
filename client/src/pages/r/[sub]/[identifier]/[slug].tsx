@@ -18,7 +18,7 @@ const PostPage = () => {
     const { data: comments, mutate: commentMutate } = useSWR<Comment[]>(
         identifier && slug ? `/posts/${identifier}/${slug}/comments` : null
     )
-    
+
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         if (newComment.trim() === "") {
@@ -188,7 +188,7 @@ const PostPage = () => {
                                             onClick={() => vote(-1, comment)}
                                         >
                                             {comment.userVote === -1 ?
-                                                <FaArrowDown className="text-red-500" />
+                                                <FaArrowDown className="text-blue-500" />
                                                 : <FaArrowDown />
                                             }
                                         </div>

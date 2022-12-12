@@ -1,8 +1,8 @@
 import axios from "axios";
+import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
-import InputGroup from "../../components/InputGroup";
-import { GetServerSideProps } from "next";
+import InputGroup from "../../components/InputGroup"
 
 const SubCreate = () => {
     const [name, setName] = useState("");

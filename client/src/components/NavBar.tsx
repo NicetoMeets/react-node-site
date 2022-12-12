@@ -46,6 +46,16 @@ const NavBar: React.FC = () => {
                 <span className= "text-xl ml-20" >Tetris</span>
                 </a>
                 </Link>
+                <Link href="http://naver.com" legacyBehavior>
+                <a>
+                <span className= "text-xl ml-20" >Tetris</span>
+                </a>
+                </Link>
+                <Link href="http://naver.com" legacyBehavior>
+                <a>
+                <span className= "text-xl ml-20" >Tetris</span>
+                </a>
+                </Link>
             </span>
             
             <div className="flex">

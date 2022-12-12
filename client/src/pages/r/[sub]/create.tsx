@@ -9,7 +9,6 @@ const PostCreate = () => {
     const [body, setBody] = useState("");
     const router = useRouter();
     const { sub: subName } = router.query;
-    
     const submitPost = async (e: FormEvent) => {
         e.preventDefault();
         if (title.trim() === "" || !subName) return;
