@@ -4,26 +4,24 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
+import PostCard from '../../components/PostCard';
+import SideBar from '../../components/SideBar';
 import { useAuthState } from '../../context/auth';
 import { Post } from '../../types';
-import SideBar from '../../components/SideBar';
+
 
 const SubPage = () => {
     const [ownSub, setOwnSub] = useState(false);
-    const { authenticated, user} = useAuthState();
+    const { authenticated, user } = useAuthState();
     const fileInputRef = useRef<HTMLInputElement>(null);
     const router = useRouter();
     const subName = router.query.sub;
-
-    const { data: sub, error } = useSWR(subName ? `/subs/${subName}` : null);
-    console.log('sub', sub)
-    
+    const { data: sub, error, mutate } = useSWR(subName ? `/subs/${subName}` : null);
     useEffect(() => {
         if (!sub || !user) return;
         setOwnSub(authenticated && user.username === sub.username);
     }, [sub])
-
-
+    console.log('sub', sub);
     const uploadImage = async (event: ChangeEvent<HTMLInputElement>) => {
         if (event.target.files === null) return;
 
@@ -42,22 +40,33 @@ const SubPage = () => {
             console.log(error);
         }
     }
-    
+
     const openFileInput = (type: string) => {
-        if(!ownSub) return;
+
         const fileInput = fileInputRef.current;
         if (fileInput) {
             fileInput.name = type;
             fileInput.click();
         }
-    };
+    }
 
+    let renderPosts;
+    if (!sub) {
+        renderPosts = <p className="text-lg text-center">로딩중...</p>
+    } else if (sub.posts.length === 0) {
+        renderPosts = <p className="text-lg text-center">아직 작성된 포스트가 없습니다.</p>
+    } else {
+        renderPosts = sub.posts.map((post: Post) => (
+            <PostCard key={post.identifier} post={post} subMutate={mutate} />
+        ))
+    }
+    console.log('sub.imageUrl', sub?.imageUrl)
     return (
         <>
             {sub &&
                 <>
                     <div>
-                        <input type="file" hidden={true} ref={fileInputRef} onChange={uploadImage}/>
+                        <input type="file" hidden={true} ref={fileInputRef} onChange={uploadImage} />
                         {/* 배너 이미지 */}
                         <div className="bg-gray-400">
                             {sub.bannerUrl ? (
@@ -90,7 +99,6 @@ const SubPage = () => {
                                             height={70}
                                             className="rounded-full"
                                             onClick={() => openFileInput("image")}
-                                            
                                         />
                                     )}
                                 </div>
@@ -107,7 +115,7 @@ const SubPage = () => {
                     </div>
                     {/* 포스트와 사이드바 */}
                     <div className='flex max-w-5xl px-4 pt-5 mx-auto'>
-                        <div className="w-full md:mr-3 md:w-8/12"></div>
+                        <div className="w-full md:mr-3 md:w-8/12">{renderPosts} </div>
                         <SideBar sub={sub} />
                     </div>
                 </>
@@ -115,6 +123,5 @@ const SubPage = () => {
         </>
     )
 }
-
 
 export default SubPage
