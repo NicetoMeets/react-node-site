@@ -130,6 +130,7 @@ const PostCard = ({
                         </a>
                     </Link>
                 </div>
+                
             </div>
         </div>
     )
