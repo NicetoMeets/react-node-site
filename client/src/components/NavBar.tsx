@@ -31,31 +31,27 @@ const NavBar: React.FC = () => {
                 <span className= "text-xl ml-2" >Dizzy</span>
                 </a>
                 </Link>
-                <Link href="http://naver.com" legacyBehavior>
+                <Link href="https://NicetoMeets.github.io/react-movieflex" legacyBehavior>
                 <a>
-                <span className= "text-xl ml-20" >Movieflex</span>
+                <span className= "text-xl ml-20" >MovieFlex</span>
                 </a>
                 </Link>
-                <Link href="http://naver.com" legacyBehavior>
+                <Link href="https://NicetoMeets.github.io/React-ToDoApp" legacyBehavior>
                 <a>
                 <span className= "text-xl ml-20" >TodoApp</span>
                 </a>
                 </Link>
-                <Link href="http://naver.com" legacyBehavior>
+                <Link href="https://nicetomeets.github.io/Tetris" legacyBehavior>
                 <a>
                 <span className= "text-xl ml-20" >Tetris</span>
                 </a>
                 </Link>
-                <Link href="http://naver.com" legacyBehavior>
+                <Link href="https://github.com/NicetoMeets" legacyBehavior>
                 <a>
-                <span className= "text-xl ml-20" >Tetris</span>
+                <span className= "text-xl ml-20" >Github</span>
                 </a>
                 </Link>
-                <Link href="http://naver.com" legacyBehavior>
-                <a>
-                <span className= "text-xl ml-20" >Tetris</span>
-                </a>
-                </Link>
+                
             </span>
             
             <div className="flex">

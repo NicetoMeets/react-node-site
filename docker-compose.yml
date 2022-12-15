@@ -2,7 +2,7 @@ version: "3"
 services:
     db:
         image: postgres:latest
-        container_name: carrot-postgres
+        container_name: Dizzy-postgres
         restart: always
         ports:
             - "5432:5432"
