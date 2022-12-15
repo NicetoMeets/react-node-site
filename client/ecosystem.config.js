@@ -1,6 +1,6 @@
 module.exports = {
     apps: [{
-        name:"dizzy-client",
+        name:"Dizzy-client",
         script: "npm run start:prod"
     }]
 }
