@@ -16,6 +16,7 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 - 회원가입 로그인
 - 커뮤니티 생성
 - 포스트 페이지 생성
+- 상위 커뮤니티
 - 댓글과 투표기능
 - 무한스크롤
 - 유저페이지
@@ -31,11 +32,11 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 
 ## nextjs
 - 재사용성 middleware
-- 캐시 된 데이터를 갱신하기 위한 mutate
-- 특정 dom 선택을 위한 useRef
+- 캐시 된 데이터를 갱신 mutate
+- 특정 dom 선택 useRef
 - 상태관리 context api
 - Tailwind css
-- Router 사용
+- next/router
 - 토큰 생성을 위한 Jsonwebtoken
 - 환경변수 dotenv
 - 쿠키활용 cookie-parser
