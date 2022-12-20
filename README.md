@@ -39,9 +39,11 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 - next/router
 - 토큰 생성을 위한 Jsonwebtoken
 - 환경변수 dotenv
-- 쿠키활용 cookie-parser
+- 백엔드 cookie-parser
 - 데이터를 가져오기 위한 swr
 - 무한스크롤기능 useSWRInfinite
+- next/router의 useRouter
+- Axios 
 
 ## typescript
 - object data에 타입을 체크하기 위해 interface 사용
@@ -52,3 +54,15 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 ## AWS
 - EC2 배포
 - 환경에 따른 env-cmd
+
+
+# 에러 사항
+
+- 커뮤니티 생성할때 토큰을 쿠키안에 넣어서 보내주는데 
+프론트부분은 withCredentials true을 적어 잘보내졌고
+백엔드부분은 안되서 cookie-parser를 설치하니 잘받아졌습니다
+
+- 클라이언트와 서버 요청 응답 주소가 달라 Cors 모듈 사용
+
+- Link 태그 아래 a태그 쓸때 legacyBehavior 기입
+
