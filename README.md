@@ -39,7 +39,7 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 ## typescript
 - object data에 타입을 체크하기 위해 interface 사용
 
-# 외부
+## 외부
 - Tailwind css
 - 토큰 생성을 위한 Jsonwebtoken
 - 환경변수 dotenv
