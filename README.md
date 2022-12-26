@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 - 백엔드 cookie-parser
 - 데이터를 가져오기 위한 swr
 - 무한스크롤기능 useSWRInfinite
-- Axios 
+- axios
 - 재사용성 middleware
 - 캐시 된 데이터를 갱신 mutate
 - cors
@@ -64,5 +64,5 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 
 - 클라이언트와 서버 요청 응답 주소가 달라 Cors 모듈 사용하여 해결
 
-- Link 태그 아래 a태그 쓸때 legacyBehavior 기입
+- 백엔드에서 req.body를 받을때 body-parser 라이브러리가 필요하였다
 
