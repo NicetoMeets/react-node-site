@@ -66,9 +66,9 @@ https://user-images.githubusercontent.com/108124042/210052850-e0a05176-0d0b-45f4
 
 # 에러 사항
 
-- 유저 생성할때 쿠키저장을 위해 withCredentials true 기입
 
 - 클라이언트와 서버 요청 응답 주소가 달라 Cors 모듈 사용하여 해결
+- 유저 생성할때 쿠키저장을 위해 withCredentials true 기입
 
 - 백엔드에서 req.body를 받을때 body-parser 라이브러리가 필요했음
 
