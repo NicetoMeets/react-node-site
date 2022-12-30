@@ -57,8 +57,7 @@ https://user-images.githubusercontent.com/108124042/210052850-e0a05176-0d0b-45f4
 - axios 이용하여 프론트와 백 교류
 - 재사용성 middleware
 - 캐시 된 데이터를 갱신 mutate
-- 
-- 
+
 
 ## AWS
 - EC2 배포
@@ -67,9 +66,7 @@ https://user-images.githubusercontent.com/108124042/210052850-e0a05176-0d0b-45f4
 
 # 에러 사항
 
-- 커뮤니티 생성할때 토큰을 쿠키안에 넣어서 보내주기위해
-프론트부분은 withCredentials true 기입
-백엔드부분은 cookie-parser 설치
+- 유저 생성할때 쿠키저장을 위해 withCredentials true 기입
 
 - 클라이언트와 서버 요청 응답 주소가 달라 Cors 모듈 사용하여 해결
 
