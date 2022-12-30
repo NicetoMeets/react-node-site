@@ -28,7 +28,9 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 
 ## typeorm
 - 객체와 관계형 데이터베이스의 데이터 연결
-- entity 생성
+- 엔티티 생성하여 클래스를 데이터베이스 테이블로 변환
+- BaseEntity 생성하여 각 엔티티에 상속
+- Class Transformer로 Expose Exclude 사용
 
 ## nextjs
 - next/router
@@ -41,15 +43,20 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 
 ## 외부
 - Tailwind css
+- bcryptjs 비밀번호를 암호화하여 데이테베이스에 저장
+- class-validator 지정한 오브젝트 프로퍼티 검증
+- class-transformer 
+
 - 토큰 생성을 위한 Jsonwebtoken
 - 환경변수 dotenv
 - 백엔드 cookie-parser
 - 데이터를 가져오기 위한 swr
 - 무한스크롤기능 useSWRInfinite
-- axios
+- axios 이용하여 프론트와 백 교류
 - 재사용성 middleware
 - 캐시 된 데이터를 갱신 mutate
-- cors
+- 
+- 
 
 ## AWS
 - EC2 배포
@@ -60,9 +67,9 @@ https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175
 
 - 커뮤니티 생성할때 토큰을 쿠키안에 넣어서 보내주기위해
 프론트부분은 withCredentials true 기입
-백엔드부분은 안되서 cookie-parser 설치
+백엔드부분은 cookie-parser 설치
 
 - 클라이언트와 서버 요청 응답 주소가 달라 Cors 모듈 사용하여 해결
 
-- 백엔드에서 req.body를 받을때 body-parser 라이브러리가 필요하였다
+- 백엔드에서 req.body를 받을때 body-parser 라이브러리가 필요했음
 
