@@ -11,7 +11,9 @@ Dizzy 커뮤니티 사이트입니다
 - 커뮤니티 기능이 있는 사이트를 만들어 보았습니다
 
 # 구현 영상
-https://user-images.githubusercontent.com/108124042/208572433-6aad9795-d7dc-4175-a580-b831f8c7ca18.mp4
+
+https://user-images.githubusercontent.com/108124042/210052474-90e20654-360a-4e82-9f08-4d342c7f3575.mp4
+
 
 - 회원가입 로그인
 - 커뮤니티 생성
