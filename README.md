@@ -12,7 +12,7 @@ Dizzy 커뮤니티 사이트입니다
 
 # 구현 영상
 
-https://user-images.githubusercontent.com/108124042/210052686-ca0f3d4c-80ce-415e-9273-4175337bddeb.mp4
+https://user-images.githubusercontent.com/108124042/210052850-e0a05176-0d0b-45f4-8d5a-2988d6600551.mp4
 
 
 - 회원가입 로그인
