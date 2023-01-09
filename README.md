@@ -78,13 +78,17 @@ https://user-images.githubusercontent.com/108124042/210052850-e0a05176-0d0b-45f4
 - 클라이언트와 서버 요청 응답 주소가 달라 Cors 모듈 사용하여 해결
 - 유저 생성할때 쿠키저장을 위해 withCredentials true 기입
 
+
 - 백엔드에서 req.body를 받을때 body-parser 라이브러리가 필요했음
+
 
 - 미들웨어 user.ts 에서 pending이 걸려 진행이안됏음
 - next()로 해결
 
+
 - sub엔티티에 imageUrl과 bannerUrl 이 expose 되지않았음
 - Base엔티티에 class-transformer에서 가져온 INSTANCETOPLAIN(THIS) 코드를 추가하여 해결
+
 
 - 이미지가 로드되지않아 
 next.config.js 파일에 
@@ -92,6 +96,7 @@ next.config.js 파일에
 그래도 나오지않아서 찿아보니
 SERVER.TS에 public 파일안에 image를 브라우저로 접근했을때 제공 할수있게 해주기위해
 app.use(express.static("public")을 적어서 해결
+
 
 - 메인페이지에 접속했을때 이미지버그가 발생
 로그를 보니 imageurl에 경로가 아닌 urn이나옴
