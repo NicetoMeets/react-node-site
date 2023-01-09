@@ -95,7 +95,6 @@ app.use(express.static("public")을 적어서 해결
 
 - 메인페이지에 접속했을때 이미지버그가 발생
 로그를 보니 imageurl에 경로가 아닌 urn이나옴
-
 topsub 핸들러에 있는 imageurl부분을 postgres operator || 를 사용하여 경로와 이름을 합쳐주었다니 해결
 
 
