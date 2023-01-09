@@ -82,7 +82,7 @@ https://user-images.githubusercontent.com/108124042/210052850-e0a05176-0d0b-45f4
 - 백엔드에서 req.body를 받을때 body-parser 라이브러리가 필요했음
 
 
-- 미들웨어 user.ts 에서 pending이 걸려 진행이안됏음
+- 미들웨어 user.ts 에서 pending이 걸려 진행이되지 않았다
 - next()로 해결
 
 
