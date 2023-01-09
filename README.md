@@ -86,14 +86,17 @@ https://user-images.githubusercontent.com/108124042/210052850-e0a05176-0d0b-45f4
 - sub엔티티에 imageUrl과 bannerUrl 이 expose 되지않았음
 - Base엔티티에 class-transformer에서 가져온 INSTANCETOPLAIN(THIS) 코드를 추가하여 해결
 
--이미지가 로드되지않아 
+- 이미지가 로드되지않아 
 next.config.js 파일에 
 이미지 도메인에 이미지경로를 추가하였다
 그래도 나오지않아서 찿아보니
 SERVER.TS에 public 파일안에 image를 브라우저로 접근했을때 제공 할수있게 해주기위해
 app.use(express.static("public")을 적어서 해결
 
--메인페이지에 접속했을때 이미지버그가 발생
+- 메인페이지에 접속했을때 이미지버그가 발생
 로그를 보니 imageurl에 경로가 아닌 urn이나옴
 
 topsub 핸들러에 있는 imageurl부분을 postgres operator || 를 사용하여 경로와 이름을 합쳐주었다니 해결
+
+
+
